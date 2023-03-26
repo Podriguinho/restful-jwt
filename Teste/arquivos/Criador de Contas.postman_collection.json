@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "e7b2ddd2-be20-4b14-b428-14eb0ecab24a",
+		"name": "Criador de Contas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Salva Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"banana1\",\r\n    \"senha\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/usuario/salvar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario",
+						"salvar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria conta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYW5hbmExIiwiZXhwIjoxNjc5NDM5NjEzfQ.6eJauk2d_DNPYXFE91s634GfKf0PUn49MGOxxicI7jsor5kk4r0m0wc4HESHn9VaX0Fv4ll1Vk8COr6CmtjjEw",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"friendlyName\": \"string\",\r\n  \"accountType\": \"SYSTEM\",\r\n  \"currencyCode\": \"UNDEFINED\",\r\n  \"referenceAccountNumber\": \"string\",\r\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"accountNumber\": \"string\",\r\n  \"actualBalance\": {\r\n    \"value\": 0,\r\n    \"currency\": \"EUR\",\r\n    \"displayCurrencyCode\": \"string\",\r\n    \"displayText\": \"string\"\r\n  },\r\n  \"availableBalance\": {\r\n    \"value\": 0,\r\n    \"currency\": \"EUR\",\r\n    \"displayCurrencyCode\": \"string\",\r\n    \"displayText\": \"string\"\r\n  },\r\n  \"accountHolderId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"oldAccountNumber\": \"string\",\r\n  \"accountStatus\": \"ACTIVE\",\r\n  \"createdDateTime\": \"2023-03-17T20:17:36.731Z\",\r\n  \"externalReference\": \"string\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/conta/salvar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"conta",
+						"salvar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\":\"banana1\",\r\n    \"senha\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
